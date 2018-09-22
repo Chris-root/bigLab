@@ -1,0 +1,331 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Notebook入门指南 &mdash; biglab 1.0 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="Python常用库介绍" href="Python常用库介绍.html" />
+    <link rel="prev" title="Python入门指南" href="Python入门指南.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="docs.html" class="icon icon-home"> biglab
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">编程基础</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Python入门指南.html">Python入门指南</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Notebook入门指南</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">Notebook启动页面</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">新建一个notebook</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">单元操作</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#markdown">Markdown</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">notebook绘图</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">notebook导出</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id6">notebook的命名</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">扩展</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Python常用库介绍.html">Python常用库介绍</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="docs.html">biglab</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="docs.html">Docs</a> &raquo;</li>
+        
+      <li>Notebook入门指南</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/Notebook入门指南.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast,
+.nboutput.nblast {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast + .nbinput {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+</style>
+<div class="section" id="notebook">
+<h1>Notebook入门指南<a class="headerlink" href="#notebook" title="永久链接至标题">¶</a></h1>
+<p><code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Notebook</span></code> （此前被称为 IPython notebook）是一个交互式笔记本，支持运行 40 多种编程语言。</p>
+<p>Jupyter Notebook 的本质是一个 Web 应用程序，便于创建和共享文学化程序文档，支持实时代码，数学方程，可视化和 markdown。 用途包括：数据清理和转换，数值模拟，统计建模，机器学习等等。</p>
+<hr class="docutils" />
+<p>本文用最少的时间带你进入Notebook的大门。建议一边学习，一边在 <a href="#id7"><span class="problematic" id="id8">BigLab_</span></a> 在线开发环境里实践。</p>
+<div class="section" id="id1">
+<h2>Notebook启动页面<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<p><img alt="pic1" src="_images/pic1.png" /></p>
+</div>
+<div class="section" id="id2">
+<h2>新建一个notebook<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>鼠标点击右上角的 <code class="docutils literal notranslate"><span class="pre">New</span></code> 按钮，在下拉选项中选择想启动的notebook内核。</p>
+<p><img alt="pic2" src="_images/pic2.png" /></p>
+<div class="admonition note">
+<p class="first admonition-title">注解</p>
+<p class="last">本教程默认选择启动Python内核来进行演示。</p>
+</div>
+<p>Python notebook的初始化页面：</p>
+<p><img alt="pic3" src="_images/pic3.png" /></p>
+<p>notebook主要由以下部分组成：</p>
+<blockquote>
+<div><ul class="simple">
+<li>notebook名字</li>
+<li>主菜单栏，包括notebook的保存、重载、重启内核、导出等</li>
+<li>快捷键</li>
+<li>notebook编辑区</li>
+</ul>
+</div></blockquote>
+<p>可以点击菜单栏右侧的Help按钮作进一步的了解。</p>
+</div>
+<div class="section" id="id3">
+<h2>单元操作<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p>在编辑区，可以看见一个个单元（cell），以 <code class="docutils literal notranslate"><span class="pre">ln[]</span></code> 开头的就是一个代码单元。在代码单元里，可以输入任何代码并执行：</p>
+<p><img alt="pic4" src="_images/pic4.png" /></p>
+<div class="admonition attention">
+<p class="first admonition-title">注意</p>
+<p class="last">notebook可以返回之前的cell进行修改并重新运行。</p>
+</div>
+<p>cell的功能有很多，还可以输入其他形式：</p>
+<p><img alt="pic5" src="_images/pic5.png" /></p>
+<p>notebook提供了丰富的cell操作，可以对cell进行复制、剪切、删除等操作：</p>
+<p><img alt="pic9" src="_images/pic9.png" /></p>
+</div>
+<div class="section" id="markdown">
+<h2>Markdown<a class="headerlink" href="#markdown" title="永久链接至标题">¶</a></h2>
+<p>通过选择cell的Markdown或Heading可以添加标题：</p>
+<p><img alt="pic6" src="_images/pic6.png" /></p>
+<div class="admonition important">
+<p class="first admonition-title">重要</p>
+<p class="last">只有六级标题。</p>
+</div>
+<p>结合cell的不同功能，可以编写优美的notebook：</p>
+<p><img alt="pic7" src="_images/pic7.png" /></p>
+<p>Markdown同时也支持HTML代码：</p>
+<p><img alt="pic11" src="_images/pic11.png" /></p>
+</div>
+<div class="section" id="id4">
+<h2>notebook绘图<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<p>利用Python的库Matplotlib画图：</p>
+<p><img alt="pic12" src="_images/pic12.png" /></p>
+</div>
+<div class="section" id="id5">
+<h2>notebook导出<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+<p>可对notebook进行多种格式的导出：</p>
+<blockquote>
+<div><ul class="simple">
+<li>HTML</li>
+<li>Markdown</li>
+<li>ReST</li>
+<li>PDF</li>
+<li>Python</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="id6">
+<h2>notebook的命名<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
+<p>点击 <code class="docutils literal notranslate"><span class="pre">Untitled</span></code> 对notebook进行重命名：</p>
+<p><img alt="pic8" src="_images/pic8.png" /></p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Python常用库介绍.html" class="btn btn-neutral float-right" title="Python常用库介绍" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Python入门指南.html" class="btn btn-neutral" title="Python入门指南" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Chris Zan.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0',
+            LANGUAGE:'zh_CN',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/translations.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,371 @@
+body {
+    font-family: "Microsoft YaHei", Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 1.78571;
+    color: #3D4752;
+    background-color: #fff;
+}
+html,body {
+    margin: 0;
+    height: 100%
+}
+#wrapper {
+    min-height: 100%;
+    position: relative;
+}
+/*头部导航栏*/
+.navbar {
+    min-height: 72px;
+    border-color: transparent;
+}
+.navbar-fixed-top {
+    position: fixed;
+    right: 0;
+    left: 0;
+    /*设置元素的堆叠顺序,z-index的值决定谁在最上层*/
+    z-index: 1030;
+}
+.navbar-nav>li>a {
+    position: relative;
+    display: block;
+    padding: 10px 20px;
+    line-height: 25px
+}
+.navbar-brand {
+    float: left;
+    height: 76px;
+}
+.navbar-toggle {
+    margin-top: 19px;
+}
+@media (min-width:768px) {
+    .navbar-toggle {
+        display: none;
+    }
+}
+@media (min-width:768px) {
+    .navbar-nav {
+        float: left;
+        margin: 0
+    }
+    .navbar-nav>li {
+        float: left
+    }
+}
+@media (min-width:768px) {
+    .navbar-right {
+        float: right !important;
+        margin-right: -15px
+    }
+}
+.navbar-default .navbar-nav>li>a {
+    color: #fff
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #fff
+}
+.navbar-default .navbar-collapse{
+    border-color: transparent;
+}
+@media (min-width:768px) and (max-width:991px) {
+    .nav>li>a {
+        padding-left: 20px;
+        padding-right: 20px
+    }
+}
+@media (min-width:768px) {
+    .navbar-nav>li>a {
+        padding-top: 24.5px;
+        padding-bottom: 24.5px
+    }
+}
+/*网页正文*/
+#content {
+    padding-top: 100px;
+    padding-bottom: 350px
+}
+#content .main-hero {
+    margin-top: -25px !important;
+    margin-bottom: 24px
+}
+#content .main-hero .hero-wrapper {
+    padding-top: 175px !important;
+    padding-bottom: 125px !important
+}
+@media (max-width:992px) {
+    #content {
+        padding-bottom: 360px;
+    }
+}
+@media (max-width:767px) {
+    #content {
+        padding-bottom: 1050px;
+    }
+}
+.main-hero .hero-wrapper h1,
+.main-hero .hero-wrapper h3 {
+    color: #fff;
+    margin-bottom: 16px;
+}
+.main-hero .hero-wrapper .btn {
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 16px;
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 600;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    white-space: nowrap;
+    padding: 8px 32px;
+    font-size: 18px;
+    border-radius: 5px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+.main-hero .lead {
+    text-align: center;
+    color: white
+}
+@media (min-width:992px) {
+    .container {
+        width: 970px
+    }
+}
+@media (min-width:1200px) {
+    .container {
+        width: 1170px
+    }
+}
+/*页脚*/
+#footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0
+}
+.footer {
+    padding-top: 26px;
+    padding-bottom: 26px
+}
+
+.navbar-biglab {
+    color: #fff;
+    background-color: #E46E2E;
+}
+.navbar-biglab .navbar-nav > li > a.active,
+.navbar-biglab .navbar-nav > li >a:hover,
+.navbar-biglab .navbar-nav > li > a:focus{
+    color: #fff;
+}
+.navbar-biglab .navbar-nav > li > a.active div,
+.navbar-biglab .navbar-nav > li > a:hover div {
+    border-bottom: 2px solid #fff;
+}
+.navbar-biglab .navbar-brand {
+    padding: 24px 15px;
+}
+.navbar-biglab .navbar-brand img {
+    height: 28px;
+}
+.navbar-biglab .navbar-right .login,
+.navbar-biglab .navbar-right .register  {
+    padding: 20px;
+}
+.navbar-biglab .navbar-right .login a,
+.navbar-biglab .navbar-right .register a {
+    border-radius: 4px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border: 1px solid #fff;
+}
+.navbar-biglab .navbar-right .register a {
+    padding: 4px 20px;
+    color: #E46E2E;
+    background-color: #fff;
+}
+.navbar-biglab .navbar-right .login a {
+    padding: 4px 20px;
+}
+.navbar-biglab .navbar-right .login a:hover {
+    background-color: #fff;
+    color: #E46E2E;
+}
+@media (max-width:767px) {
+  .navbar-biglab .navbar-nav > li > a.active,
+  .navbar-biglab .navbar-nav > li > a:hover,
+  .navbar-biglab .navbar-nav > li > a:focus {
+      color: #fff;
+  }
+  .navbar-biglab .navbar-nav > li > a.active div,
+  .navbar-biglab .navbar-nav > li > a:hover div,
+  .navbar-biglab .navbar-nav > li > a:focus div{
+      border-bottom: none;
+  }
+  .navbar-biglab .navbar-right .login,
+  .navbar-biglab .navbar-right .register {
+      padding: 0;
+  }
+  .navbar-biglab .navbar-right .login a,
+  .navbar-biglab .navbar-right .register a {
+      border:none;
+  }
+  .navbar-biglab .navbar-right .register a {
+      padding: 10px 20px;
+      color: #fff;
+      background-color: #E46E2E;
+  }
+  .navbar-biglab .navbar-right .login a {
+      padding: 4px 20px;
+  }
+}
+
+.container {
+    padding: 0;
+    width: 100%;
+}
+.row {
+    margin: 0;
+}
+.content-container {
+    margin: auto;
+}
+.inline-intro-wrapper-odd .text-center {
+    float: initial;
+}
+@media (min-width:768px) {
+    .content-container {
+        width: 750px;
+        margin: auto;
+    }
+    .inline-intro-wrapper-odd .text-center {
+        float: right;
+    }
+}
+@media (min-width:992px) {
+    .content-container {
+        width: 970px;
+        margin: auto;
+    }
+}
+@media (min-width:1200px) {
+    .content-container {
+        width:1170px;
+        margin: auto;
+    }
+    .footer-container {
+        width:800px;
+        margin: auto;
+    }
+}
+.inline-intro-wrapper-odd {
+    background-color: #f1f4f9;
+}
+
+.main-hero .hero-wrapper {
+    background:url(../images/bg.jpg) no-repeat center/cover;
+}
+.main-hero .hero-wrapper .biglab-hero {
+    font-size: 60px;
+}
+.main-hero .hero-wrapper .biglab-subhero {
+    font-size: 30px;
+}
+.main-hero .hero-wrapper .biglab-lead {
+    font-size: 18px;
+}
+
+.main-hero .hero-wrapper .biglab-btn-hollow,
+.main-hero .hero-wrapper .biglab-btn-hollow:focus {
+    color: #fff;
+    border:2px solid #E46E2E;
+    background-color: #E46E2E;
+}
+.main-hero .hero-wrapper .biglab-btn-hollow:hover {
+    color: #fff;
+    border:2px solid #fff;
+    background-color: transparent;
+}
+.main-hero .hero-wrapper .biglab-btn-full,
+.main-hero .hero-wrapper .biglab-btn-full:focus {
+    color: #fff;
+    border:2px solid #fff;
+    background-color: transparent;
+}
+.main-hero .hero-wrapper .biglab-btn-full:hover {
+    color: #fff;
+    border:2px solid #E46E2E;
+    background-color: #E46E2E;
+}
+.biglab-text-wrapper .text-content {
+    padding: 0px;
+}
+.biglab-text-wrapper .text-content .text {
+    font-size: 14px;
+}
+.biglab-text-wrapper .text-content .font-monir {
+    text-align: center;
+    color: #92979e;
+}
+.biglab-text-wrapper .text-content .inline-intro {
+    margin: auto;
+    padding: 50px 10px;
+}
+.biglab-text-wrapper .text-content .inline-intro .intro-bg {
+    width: 300px;
+}
+@media (max-width:400px) {
+    .biglab-text-wrapper .text-content .inline-intro .intro-bg {
+        width: 100%;
+    }
+}
+.biglab-text-wrapper .text-content .inline-intro .intro-content {
+    padding: 72px 20px;
+}
+.biglab-text-wrapper .text-content .inline-intro .intro-content .intro-title {
+    font-size: 24px;
+    text-align: center;
+}
+.biglab-text-wrapper .text-content .inline-intro .intro-content .intro-text {
+    font-size: 18px;
+    color: #666;
+}
+.biglab-text-wrapper .biglab-icon-list-item {
+    padding-bottom: 40px;
+}
+.biglab-text-wrapper .biglab-icon-list-item .biglab-icon {
+    text-align: center;
+}
+.biglab-text-wrapper .biglab-icon-list-item .biglab-icon img {
+    height: 44px;
+}
+.biglab-text-wrapper .sub-title {
+    margin: 10px 0;
+    font-size: 16px;
+    text-align: center;
+    padding: 5px 10px 0;
+    font-weight: bold;
+    color: #333;
+}
+footer.footer {
+    border-top: 1px solid #1e2024;
+    background-color: #1e2024;
+}
+footer.footer .footer-list li.capture {
+    font-size: 14px;
+    color: #fff;
+    font-weight: bold;
+}
+footer.footer .footer-list li.item,
+footer.footer .footer-list li.item > a {
+    font-size: 14px;
+    color: #fff;
+    font-weight: normal;
+}
+footer.footer .item-image-list img {
+    height: 20px;
+}

@@ -1,0 +1,141 @@
+
+**************************
+Notebook入门指南
+**************************
+
+``Jupyter Notebook`` （此前被称为 IPython notebook）是一个交互式笔记本，支持运行 40 多种编程语言。
+
+Jupyter Notebook 的本质是一个 Web 应用程序，便于创建和共享文学化程序文档，支持实时代码，数学方程，可视化和 markdown。 用途包括：数据清理和转换，数值模拟，统计建模，机器学习等等。
+
+==============
+
+本文用最少的时间带你进入Notebook的大门。建议一边学习，一边在 BigLab_ 在线开发环境里实践。
+
+Notebook启动页面
+----------------
+
+|pic1|
+
+.. |pic1| image:: ./images/pic1.png
+
+新建一个notebook
+-----------------
+
+鼠标点击右上角的 ``New`` 按钮，在下拉选项中选择想启动的notebook内核。
+
+|pic2|
+
+.. |pic2| image:: ./images/pic2.png
+
+.. note::
+
+    本教程默认选择启动Python内核来进行演示。
+
+Python notebook的初始化页面：
+
+|pic3|
+
+.. |pic3| image:: ./images/pic3.png
+
+notebook主要由以下部分组成：
+
+    - notebook名字
+
+    - 主菜单栏，包括notebook的保存、重载、重启内核、导出等
+
+    - 快捷键
+
+    - notebook编辑区
+
+可以点击菜单栏右侧的Help按钮作进一步的了解。
+
+单元操作
+---------
+在编辑区，可以看见一个个单元（cell），以 ``ln[]`` 开头的就是一个代码单元。在代码单元里，可以输入任何代码并执行：
+
+|pic4|
+
+.. |pic4| image:: ./images/pic4.png
+
+.. attention ::
+
+    notebook可以返回之前的cell进行修改并重新运行。
+
+
+cell的功能有很多，还可以输入其他形式：
+
+|pic5|
+
+.. |pic5| image:: ./images/pic5.png
+
+notebook提供了丰富的cell操作，可以对cell进行复制、剪切、删除等操作：
+
+|pic9|
+
+.. |pic9| image:: ./images/pic9.png
+
+Markdown
+----------
+
+通过选择cell的Markdown或Heading可以添加标题：
+
+|pic6|
+
+.. |pic6| image:: ./images/pic6.png
+
+.. important::
+
+    只有六级标题。
+
+结合cell的不同功能，可以编写优美的notebook：
+
+|pic7|
+
+.. |pic7| image:: ./images/pic7.png
+
+Markdown同时也支持HTML代码：
+
+|pic11|
+
+.. |pic11| image:: ./images/pic11.png
+
+notebook绘图
+-------------
+利用Python的库Matplotlib画图：
+
+|pic12|
+
+.. |pic12| image:: ./images/pic12.png
+
+notebook导出
+-------------
+可对notebook进行多种格式的导出：
+
+    - HTML
+
+    - Markdown
+
+    - ReST
+
+    - PDF
+
+    - Python
+
+notebook的命名
+-----------------
+点击 ``Untitled`` 对notebook进行重命名：
+
+|pic8|
+
+.. |pic8| image:: ./images/pic8.png
+
+
+
+
+
+
+
+
+
+
+

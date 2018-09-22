@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="images/icon.png">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./css/index.css">
+    <title>BigLab - 编程学习平台</title>
+    <style>
+        .useralert-register {
+            width: 100%;
+            height: 560px;
+            position: fixed;
+            top: 10vh;
+            z-index: 1000;
+            display: none;
+        }
+
+        .useralert-login {
+            width: 100%;
+            height: 470px;
+            position: fixed;
+            top: 10vh;
+            z-index: 1000;
+            display: none;
+        }
+
+        .user-set {
+            width: 416px;
+            height: 100%;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        .user-set form {
+            max-width: 260px;
+            margin: 0 auto;
+        }
+
+        .user-set h2 {
+            text-align: center;
+        }
+
+        .user-set .close-icon {
+            width: 26px;
+            position: absolute;
+            right: 760px;
+            top: 15px;
+        }
+
+        .user-set div {
+            margin: 20px auto;
+
+        }
+
+        .user-set div input {
+            width: 100%;
+            border-radius: 5px;
+            padding: 2px 5px;
+            /*outline: none;*/
+            border: 1px solid #333;
+        }
+
+        .user-set .indentify-code img {
+            width: 100px;
+            height: 30px;
+            float: left;
+        }
+
+        .user-set .indentify-code input,
+        .user-register .login-btn input,
+        .user-login .register-btn input {
+            width: 50%;
+            float: right;
+        }
+
+        .user-register .tip {
+            clear: both;
+            margin-top: 20px;
+            padding-top: 20px;
+            text-align: center;
+        }
+
+        .user-register .login-btn span {
+            display: inline-block;
+            height: 100%;
+        }
+
+        .user-register p,
+        .user-register .login-btn span {
+            color: #000;
+            font-size: 16px;
+        }
+
+        .user-register .register-btn input,
+        .user-login .login-btn input {
+            background: rgb(228, 110, 46);
+            color: #fff;
+        }
+
+        .user-register .login-btn input,
+        .user-login .register-btn input {
+            background: #fff;
+            color: #E46E2E;
+        }
+
+        .user-set .login-other {
+            text-align: center;
+        }
+
+        .user-set .login-other p {
+            border-bottom: 1px solid #666;
+            color: #000;
+        }
+
+        .user-set .login-other img {
+            width: 20%;
+            padding-right: 10px;
+        }
+
+        .user-login .forgetInfo {
+            float: right;
+        }
+    </style>
+</head>
+
+<body id="body">
+    <div id="wrapper">
+        <div id="header">
+            <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-biglab " role="">
+                <div class="container content-container ">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <div class="navbar-brand">
+                            <a href="">
+                                <img src="images/logo-bigquant.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="collapse navbar-collapse" id="main-navbar">
+                        <ul class="nav navbar-nav">
+                            <li class="primary">
+                                <a href="">
+                                    <div>我的Lab</div>
+                                </a>
+                            </li>
+                            <li class="primary">
+                                <a href="">
+                                    <div>社区</div>
+                                </a>
+                            </li>
+                            <li class="primary">
+                                <a href="">
+                                    <div>学院</div>
+                                </a>
+                            </li>
+                            <li class="primary">
+                                <a href="./build/docs.html" >
+                                    <div>文档</div>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="primary register">
+                                <a href="javascript:0;">注册</a>
+                            </li>
+                            <li class="primary login">
+                                <a href="javascript:0;">登录</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!--header end -->
+        <div class="useralert-register" id="useralert-register">
+            <div class="user-register user-set" id="user-register">
+                <form action="" name="register">
+                    <h2>用户注册</h2>
+                    <img src="images/close.png" alt="" class="close-icon">
+                    <div class="username"><input type="text" placeholder="用户名"></div>
+                    <div class="useremail"><input type="email" placeholder="邮箱地址"></div>
+                    <div class="userpwd"><input type="password" placeholder="密码"></div>
+                    <div class="indentify-code"><img src="images/captcha.jpg" alt=""> <input type="text" placeholder="输入验证码"></div>
+                    <p class="tip">点击「注册」表示您同意<a href="#">用户协议</a></p>
+                    <div class="register-btn"><input type="button" value="注册"></div>
+                    <div class="login-btn"><span>已有账号</span><input type="button" value="登录"></div>
+                    <div class="login-other">
+                        <p>第三方登录</p>
+                        <div>
+                            <img src="images/wechat-icon.png" alt="">
+                            <img src="images/github-icon.png" alt="">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!--register end-->
+        <div class="useralert-login" id="useralert-login">
+            <div class="user-login user-set" id="user-login">
+                <form action="" name="login">
+                    <h2>用户登录</h2>
+                    <img src="images/close.png" alt="" class="close-icon">
+                    <div class="username"><input type="email" placeholder="邮箱地址"></div>
+                    <div class="userpwd"><input type="password" placeholder="密码"></div>
+                    <span class="forgetInfo"><a href="#">忘记密码？</a></span>
+                    <div class="login-btn"><input type="button" value="登录"></div>
+                    <div class="register-btn"><span>没有账号?</span><input type="button" value="注册"></div>
+                    <div class="login-other">
+                        <p>第三方登录</p>
+                        <div>
+                            <img src="images/wechat-icon.png" alt="">
+                            <img src="images/github-icon.png" alt="">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!--login end-->
+        <div id="content">
+            <div class="main-hero">
+                <div class="hero-wrapper">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2 text-center">
+                                <h1 class="hero biglab-hero">BigLab</h1>
+                                <h3 class="biglab-subhero">您的智能学习平台</h3>
+                                <div class="lead biglab-lead">Intelligent learning platform</div>
+                                <a href="" class="btn btn-default btn-lg biglab-btn biglab-btn-hollow">编写Lab</a>
+                                <a href="" class="btn btn-default btn-lg biglab-btn biglab-btn-full">新手教程</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="biglab-text-wrapper">
+                        <div class="text-content">
+                            <div class="inline-intro-wrapper-even">
+                                <div class="inline-intro row content-container">
+                                    <div class="col-md-5 col-sm-7 text-center">
+                                        <img src="images/pic1.png" alt="" class="intro-bg">
+                                    </div>
+                                    <div class="col-md-7 col-sm-5 intro-content">
+                                        <p class="intro-title">Python学习</p>
+                                        <p class="intro-text">轻量级的编程语言学习平台</p>
+                                        <p class="intro-text">在这里，编程人员可以无需安装、无需配置地进行程序开发</p>
+                                        <p class="intro-text"><a href="">社区管理</a> 优秀学习资源 一览无余</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="inline-intro-wrapper-odd">
+                                <div class="inline-intro row content-container">
+                                    <div class="col-md-5 col-sm-7 text-center">
+                                        <img src="images/pic2.png" alt="" class="intro-bg">
+                                    </div>
+                                    <div class="col-md-7 col-sm-5 intro-content" style="float:left;">
+                                        <p class="intro-title">专业数据处理</p>
+                                        <p class="intro-text">丰富的数学库，资源独立、更高的安全性、更好的性能</p>
+                                        <p class="intro-text">算法开发、数据可视化、数据分析以及数值计算的高级技术计算语言和交互式环境</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="section-row row-points" style="margin-top:80px">
+                    <div class="row">
+                        <div class="biglab-text-wrapper">
+                            <div class="row content-container">
+                                <div class="col-sm-4">
+                                    <div class="biglab-icon-list-item">
+                                        <div class="biglab-icon">
+                                            <img src="images/icon1.png" alt="">
+                                        </div>
+                                        <p class="sub-title">编程学习</p>
+                                        <div class="text-content">
+                                            <p class="text font-monir">主流编程</p>
+                                        </div>
+                                        <div class="text-content">
+                                            <p class="text font-monir">Python学习</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="biglab-icon-list-item">
+                                        <div class="biglab-icon">
+                                            <img src="images/icon2.png" alt="">
+                                        </div>
+                                        <p class="sub-title">数据</p>
+                                        <div class="text-content">
+                                            <p class="text font-monir">轻量级数学软件平台</p>
+                                        </div>
+                                        <div class="text-content">
+                                            <p class="text font-monir">可视化、科学性以及交互性计算</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="biglab-icon-list-item">
+                                        <div class="biglab-icon">
+                                            <img src="images/icon3.png" alt="">
+                                        </div>
+                                        <p class="sub-title">社区交流</p>
+                                        <div class="text-content">
+                                            <p class="text font-monir">资源共享、问答与交流</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--content end-->
+        <div id="footer">
+            <footer class="footer">
+                <div class="container">
+                    <div class="row footer-container footer-box">
+                        <ul class="col-sm-2 footer-list list-unstyled">
+                            <li class="capture">关于BigLab</li>
+                            <li class="item"><a href="">关于我们</a></li>
+                            <li class="item"><a href="">合作伙伴</a></li>
+                            <li class="item" style="margin-top:15px;">声明</li>
+                            <li class="item"><a href="">使用协议</a></li>
+                            <li class="item"><a href="">安全隐私</a></li>
+                        </ul>
+                        <ul class="col-sm-2 footer-list list-unstyled">
+                            <li class="capture">技术支持</li>
+                            <li class="item"><a href="">常见问题</a></li>
+                            <li class="item"><a href="">文档</a></li>
+                            <li class="item"><a href="">入门学习</a></li>
+                            <li class="item"><a href="">反馈建议</a></li>
+                        </ul>
+                        <ul class="col-sm-3 footer-list list-unstyled">
+                            <li class="capture">联系我们</li>
+                            <li class="item">客服QQ:12345678</li>
+                            <li class="item item-image-list" style="line-height:40px;">
+                                <a onclick="" title="BigLab交流QQ群"><img src="images/qq.png" alt="" style="margin-right:10px;"></a>
+                                <a onclick="" title="BigLab交流微信群"><img src="images/wechat.png" alt=""></a>
+                            </li>
+                            <li class="item">
+                                <p style="font-size:13px;">备案号 </p>
+                            </li>
+                            <li class="item"><a href="">柏拉图教育软件</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script>
+        $(function () {
+            // 注册
+            $("#main-navbar li.register").bind("click", function () {
+                // $("#useralert-register").toggle(function(){
+                //     $("#useralert-register").hide();
+                // },function(){
+                //     $("#useralert-register").show()
+                // });
+                $("#useralert-register").show();
+
+            })
+            $(".user-set .close-icon").bind("click", function () {
+                $("#useralert-register").hide();
+                $("#useralert-login").hide();
+            })
+
+            // 登录
+            $("#main-navbar li.login").bind("click",function(){
+                $("#useralert-login").show();
+            })
+        })
+    </script>
+
+</body>
+
+</html>

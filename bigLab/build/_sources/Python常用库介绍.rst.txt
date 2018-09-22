@@ -1,0 +1,21 @@
+
+**************************
+Python常用库介绍
+**************************
+
+近年来，数据科学行业对于Python的越来越广泛，本章节列出了数据科学的常用库
+
+.. csv-table::
+    :header: "模块名称", "版本", "简介", "网址"
+    :widths: 10,6,55,20
+
+    "**NumPy**","1.12.0","Numpy为Python中的n维数组和矩阵的操作提供了NumPy数组类型的数学运算向量化，可以改善性能，从而加快执行速度。","`<http://www.numpy.org/>`_"
+    "**SciPy**","0.17.1","SciPy是一个工程和科学软件库，包含线性代数，优化，集成和统计的模块。","`<http://www.scipy.org/>`_"
+    "**pandas**","0.19.2","pandas是数据整理的完美工具，旨在通过“标记”和“关系”数据进行快速简单的数据操作，聚合和可视化。","`<http://pandas.pydata.org/pandas-docs/version/0.19.2/>`_"
+    "**matplotlib**","1.5.1","Matplotlib为轻松生成简单而强大的可视化而量身定制。","`<http://matplotlib.org/1.5.1/>`_"
+    "**seaborn**","0.7.1","Seaborn主要关注统计模型的可视化；这种可视化包括热图，这些热图（heat map）总结数据但仍描绘整体分布。","`<http://web.stanford.edu/~mwaskom/software/seaborn/>`_"
+    "**Bokeh**","0.13.0","Bokeh针对交互式可视化。与以前的库相比，它独立于Matplotlib，通过现代浏览器以数据驱动文档（d3.js）的风格呈现。","`<https://bokeh.pydata.org/>`_"
+    "**SciKit-Learn**","0.19.1","scikit-learn给常见的机器学习算法公开了一个简洁、一致的接口，可简单地将机器学习带入生产系统中。","`<http://scikit-learn.org/stable/>`_"
+    "**Theano**","0.8.2","Theano定义了与NumPy类似的多维数组，以及数学运算和表达式。此库是被编译的，可实现在所有架构上的高效运行。","`<http://deeplearning.net/software/theano/>`_"
+    "**tensorflow**","0.12.1","TensorFlow是数据流图计算的开源库，为机器学习不断打磨。","`<https://www.tensorflow.org/>`_"
+    "**Keras**","1.2.1","Keras用于在高层的接口上构建神经网络。它简单易懂，具有高级可扩展性。","`<https://keras.io/>`_"

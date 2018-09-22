@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>欢迎注册Biglab</title>
+    <link rel="icon" href="images/icon.png">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./css/index.css">
+    <style>
+        body {
+            background: url(images/Hippopx.jpg) no-repeat;
+            background-size: 100%;
+        }
+        .useralert {
+            width: 100%;
+            height: 560px;
+            position: fixed;
+            top: 10vh;
+            z-index: 1000;
+            /*display: none;*/
+        }
+
+        .user-set {
+            width: 416px;
+            height: 100%;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 20px;
+            /*border: 1px solid #ccc;*/
+            -webkit-box-shadow: 0px 0px 12px 1px rgba(87, 87, 87, 0.2);
+            box-shadow: 0px 0px 12px 1px rgba(87, 87, 87, 0.2); 
+        }
+
+        .user-set form {
+            max-width: 260px;
+            margin: 0 auto;
+        }
+
+        .user-set h2 {
+            text-align: center;
+        }
+
+
+        .user-set div {
+            margin: 20px auto;
+
+        }
+
+        .user-set div input {
+            width: 100%;
+            border-radius: 5px;
+            padding: 2px 5px;
+            /*outline: none;*/
+            border: 1px solid #333;
+        }
+
+        .user-set .indentify-code img {
+            width: 100px;
+            height: 30px;
+            float: left;
+        }
+
+        .user-set .indentify-code input,
+        .user-set .login-btn input {
+            width: 50%;
+            float: right;
+        }
+
+        .user-register .tip {
+            clear: both;
+            margin-top: 20px;
+            padding-top: 20px;
+            text-align: center;
+        }
+
+        .user-register .login-btn span {
+            display: inline-block;
+            height: 100%;
+        }
+
+        .user-register p,
+        .user-register .login-btn span {
+            color: #000;
+            font-size: 16px;
+        }
+
+        .user-register .register-btn input {
+            background: rgb(228, 110, 46);
+            color: #fff;
+        }
+
+        .user-register .login-btn input {
+            background: #fff;
+            color: #E46E2E;
+        }
+
+        .user-set .login-other {
+            text-align: center;
+        }
+
+        .user-set .login-other p {
+            border-bottom: 1px solid #666;
+            color: #000;
+        }
+
+        .user-set .login-other img {
+            width: 20%;
+            padding-right: 10px;
+        }
+    </style>
+</head>
+
+<body id="body">
+    <div id="wrapper">
+        <div id="header">
+            <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-biglab " role="">
+                <div class="container content-container ">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <div class="navbar-brand">
+                            <a href="">
+                                <img src="images/0logo-bigquant.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="collapse navbar-collapse" id="main-navbar">
+                        <ul class="nav navbar-nav">
+                            <li class="primary">
+                                <a href="">
+                                    <div>我的Lab</div>
+                                </a>
+                            </li>
+                            <li class="primary">
+                                <a href="">
+                                    <div>社区</div>
+                                </a>
+                            </li>
+                            <li class="primary">
+                                <a href="">
+                                    <div>学院</div>
+                                </a>
+                            </li>
+                            <li class="primary">
+                                <a href="G:/documentation/docs/build/html/biglabDocs.html" target="_blank">
+                                    <div>文档</div>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="primary register">
+                                <a href="">注册</a>
+                            </li>
+                            <li class="primary login">
+                                <a href="close-icon">登录</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!--header end-->
+        <div class="useralert" id="useralert">
+            <div class="user-register user-set" id="user-login">
+                <form action="">
+                    <h2>用户注册</h2>
+
+                    <div class="username"><input type="text" placeholder="用户名"></div>
+                    <div class="useremail"><input type="email" placeholder="邮箱地址"></div>
+                    <div class="userpwd"><input type="password" placeholder="密码"></div>
+                    <div class="indentify-code"><img src="images/captcha.jpg" alt=""> <input type="text" placeholder="输入验证码"></div>
+                    <p class="tip">点击「注册」表示您同意<a href="#">用户协议</a></p>
+                    <div class="register-btn"><input type="button" value="注册"></div>
+                    <div class="login-btn"><span>已有账号</span><input type="button" value="登录"></div>
+                    <div class="login-other">
+                        <p>第三方登录</p>
+                        <div>
+                            <img src="images/wechat-icon.png" alt="">
+                            <img src="images/github-icon.png" alt="">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!--useralert end-->
+        <div id="footer">
+            <footer class="footer">
+                <div class="container">
+                    <div class="row footer-container footer-box">
+                        <ul class="col-sm-2 footer-list list-unstyled">
+                            <li class="capture">关于BigLab</li>
+                            <li class="item"><a href="">关于我们</a></li>
+                            <li class="item"><a href="">合作伙伴</a></li>
+                            <li class="item" style="margin-top:15px;">声明</li>
+                            <li class="item"><a href="">使用协议</a></li>
+                            <li class="item"><a href="">安全隐私</a></li>
+                        </ul>
+                        <ul class="col-sm-2 footer-list list-unstyled">
+                            <li class="capture">技术支持</li>
+                            <li class="item"><a href="">常见问题</a></li>
+                            <li class="item"><a href="">文档</a></li>
+                            <li class="item"><a href="">入门学习</a></li>
+                            <li class="item"><a href="">反馈建议</a></li>
+                        </ul>
+                        <ul class="col-sm-3 footer-list list-unstyled">
+                            <li class="capture">联系我们</li>
+                            <li class="item">客服QQ:12345678</li>
+                            <li class="item item-image-list" style="line-height:40px;">
+                                <a onclick="" title="BigLab交流QQ群"><img src="images/qq.png" alt="" style="margin-right:10px;"></a>
+                                <a onclick="" title="BigLab交流微信群"><img src="images/wechat.png" alt=""></a>
+                            </li>
+                            <li class="item">
+                                <p style="font-size:13px;">备案号 </p>
+                            </li>
+                            <li class="item"><a href="">柏拉图教育软件</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>
